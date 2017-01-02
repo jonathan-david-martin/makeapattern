@@ -54,6 +54,7 @@
 
         //console.log("create");
         //game.physics.startSystem(Phaser.Physics.P2JS);
+        /**
         var style = { font: "170px Arial", fill: "#ff0000" };
         var label_A = game.add.text(150, 70, 'A', style);
         var style = { font: "170px Arial", fill: "#00ff00" };
@@ -62,6 +63,24 @@
         var label_C = game.add.text(150, 460, 'C', style);
         var style = { font: "170px Arial", fill: "#ffff00"};
         var label_D = game.add.text(550, 460, 'D', style);
+         **/
+
+        numGrid = function() {
+            var style = {font: "20px Arial", fill: "#ff0000"};
+            var numCounter = 0;
+            var rowCounter = 0;
+            for (rowCounter = 0; rowCounter < 10; rowCounter++) {
+
+                for (i = 0; i < game.width-100; i += ((game.width -100)/ 10)) {
+                    var labelStr = 150+rowCounter*50;
+                    var label_numb = game.add.text(70 + i, 80+rowCounter*60,numCounter, style);
+                    numCounter ++;
+                }
+
+            }
+        }
+
+        numGrid();
 
         var style = { font: "32px Arial", fill: "#000000"};
         var leftMsg = game.add.text(20, 610, 'PRESS HERE TO MOVE LEFT', style);
